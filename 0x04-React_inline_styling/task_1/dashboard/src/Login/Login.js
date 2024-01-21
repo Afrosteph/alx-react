@@ -1,43 +1,31 @@
-import  React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import React from "react";
+import { StyleSheet, css } from "aphrodite";
 
 function Login() {
-  return (
-    <React.Fragment>
-      <div className={css(styles.Login)}>
-				<p>Login to access to the full dashboard</p>
-				<div>
-					<label htmlFor="email" >Email:</label>
-					<input id="email" type="email" className={css(styles.LoginInput)} />
-					<label htmlFor="password" >Password:</label>
-					<input id="password" type="password" className={css(styles.LoginInput)} />
-					<button>OK</button>
-				</div>
-      </div>
-    </React.Fragment>
-  );
+    return (
+        <React.Fragment>
+            <div className={css(styles["App-body"])}>
+                <p>Login to access the full dashboard</p>
+                <form>
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" name="email" id="email" />
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" name="password" id="password" />
+                    <button>OK</button>
+                </form>
+            </div>
+        </React.Fragment>
+    );
 }
 
 const styles = StyleSheet.create({
-	Login: {
-		fontFamily: 'Arial, Helvetica, sans-serif',
-		padding: '50px',
-		marginLeft: '-15px'
-	},
-
-	Loginp: {
-		top: '3rem',
-		left: '2.5rem'
-	},
-
-	Logindiv: {
-		marginLeft: '-5px',
-		marginTop: '15px'
-	},
-
-	LoginInput: {
-		margin: '5px'
-	},
+    "App-body": {
+        fontSize: "1rem",
+        margin: "auto",
+        height: "45%",
+        padding: "2rem",
+        borderBottom: "3px solid #e0354b",
+    },
 });
 
 export default Login;
